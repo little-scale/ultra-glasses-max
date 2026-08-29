@@ -1,3 +1,5 @@
+![Ultra Glasses Max screenshot](./screenshot.jpg)
+
 # Ultra Glasses Max
 
 Native Apple-silicon externals for using Luma Ultra XR glasses in Cycling '74
