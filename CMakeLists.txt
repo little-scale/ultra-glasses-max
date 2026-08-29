@@ -36,13 +36,10 @@ add_subdirectory(source/frame-hub)
 add_subdirectory(source/viture.ultra)
 add_subdirectory(source/jit.viture.stereo)
 
-# These notices travel with local package builds. Public binary distribution
-# additionally requires an appropriate end-user agreement; see docs/RELEASING.md.
+# The third-party notice travels with local package builds.
 file(MAKE_DIRECTORY "${CMAKE_BINARY_DIR}/package")
 configure_file("${CMAKE_SOURCE_DIR}/THIRD_PARTY_NOTICES.md"
                "${CMAKE_BINARY_DIR}/package/THIRD_PARTY_NOTICES.md" COPYONLY)
-configure_file("${CMAKE_SOURCE_DIR}/docs/BINARY_DISTRIBUTION.md"
-               "${CMAKE_BINARY_DIR}/package/BINARY_DISTRIBUTION.md" COPYONLY)
 
 # max-sdk-base refreshes bundle metadata during configuration. Always perform a
 # final signing pass, even when the external binaries did not need relinking.

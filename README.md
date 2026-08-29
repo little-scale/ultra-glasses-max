@@ -43,8 +43,23 @@ the tested macOS Luma Ultra stream supplies only the left/right pair.
 - CMake 3.25 or later and Xcode Command Line Tools
 
 The VITURE SDK is proprietary and is not committed to this repository. Download
-it from the [VITURE developer portal](https://www.viture.com/en-US/developer),
+the **VITURE XR Glasses SDK for macOS arm64** from the
+[VITURE Glasses SDK page](https://www.viture.com/developer/glasses-sdk/glasses),
 then set `VITURE_SDK_ROOT` to the extracted directory.
+
+## Quick start from source
+
+```sh
+git clone https://github.com/little-scale/ultra-glasses-max.git
+cd ultra-glasses-max
+
+export VITURE_SDK_ROOT="/absolute/path/to/VITURE_XR_Glasses_SDK_for_MacOS_arm64"
+./scripts/build.sh
+./scripts/install.sh
+```
+
+Restart Max, then open `viture.ultra.maxhelp` or
+`jit.viture.stereo.maxhelp`.
 
 ## Build
 
@@ -87,16 +102,14 @@ system for working patches and the complete message reference.
 - Camera copying is demand-driven and occurs only while a running
   `jit.viture.stereo` consumer exists.
 
-## Release and licensing
+## Source distribution and licensing
 
-The repository does not contain VITURE headers or libraries. Local builds embed
-SDK object code inside `viture.ultra.mxo` so the external can load without a
-separate SDK installation.
+GitHub releases are source-only. They do not contain VITURE headers, libraries
+or compiled Max externals. Each user downloads the official SDK separately and
+uses it to create a local package. That local package embeds the two required
+SDK libraries, so the SDK does not need to remain installed for normal Max use.
 
-Do not publish a binary build until the requirements in
-[docs/BINARY_DISTRIBUTION.md](docs/BINARY_DISTRIBUTION.md) and
-[docs/RELEASING.md](docs/RELEASING.md) have been satisfied. VITURE's SDK
-agreement imposes notice and end-user-agreement conditions on SDK object code.
+Release instructions are in [docs/RELEASING.md](docs/RELEASING.md).
 
 No open-source license has yet been selected for this project's own source.
 Until one is added, all rights are reserved. See [LICENSE](LICENSE).
