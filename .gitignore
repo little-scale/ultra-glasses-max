@@ -1,0 +1,31 @@
+.DS_Store
+.idea/
+.vscode/
+
+# CMake and local release output
+build/
+cmake-build-*/
+out/
+release/
+dist/
+
+# Native build products
+*.dylib
+*.so
+*.dll
+*.mxo/
+*.o
+*.a
+*.dSYM/
+
+# Proprietary SDK material must remain local
+VITURE_XR_Glasses_SDK_for_*/
+sdk/
+third_party/viture/
+libglasses.dylib
+libcarina_vio.dylib
+
+# Local configuration
+.env
+.env.*
+!.env.example

@@ -1,0 +1,7 @@
+* text=auto eol=lf
+*.maxhelp text eol=lf
+*.maxpat text eol=lf
+*.png binary
+*.jpg binary
+*.zip binary
+*.mxo binary

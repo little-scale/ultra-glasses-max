@@ -1,0 +1,47 @@
+name: Bug report
+description: Report a reproducible Ultra Glasses Max problem
+title: "[Bug]: "
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: Do not attach proprietary SDK files or logs containing personal information.
+  - type: input
+    id: version
+    attributes:
+      label: Package version
+      placeholder: 0.4.1
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Environment
+      description: Mac model, macOS version, Max version and SDK version
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Reproduction steps
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected result
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual result and relevant Max Console output
+    validations:
+      required: true
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: Data check
+      options:
+        - label: I checked the report for serial numbers, personal paths and proprietary SDK files.
+          required: true

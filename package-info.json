@@ -1,0 +1,15 @@
+{
+  "name": "UltraGlassesMax",
+  "displayname": "Ultra Glasses Max",
+  "version": "0.4.1",
+  "author": "Sebastian Tomczak",
+  "description": "Independent Max 9 access to Luma Ultra tracking, controls and synchronized left/right grayscale camera matrices.",
+  "max_version_min": "9.0.0",
+  "os": {
+    "macintosh": {
+      "platform": ["aarch64"],
+      "min_version": "13.0.x"
+    }
+  },
+  "tags": ["viture", "xr", "6dof", "imu", "tracking", "jitter", "camera", "hardware"]
+}
